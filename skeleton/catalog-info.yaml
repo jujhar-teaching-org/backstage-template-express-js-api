@@ -7,7 +7,6 @@ metadata:
     github.com/project-slug: "${{ values.storePath }}"
   tags:
     - library
-    - ${{ values.app_full_name }}
 spec:
   type: library
   lifecycle: experimental
