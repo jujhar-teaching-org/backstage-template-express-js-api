@@ -57,6 +57,10 @@ spec:
           title: Component
           type: string
           description: Name of the component, e.g. java-client
+        component:
+          title: Description
+          type: string
+          description: "Description of the component, e.g. api to surface cat gifs"
         slack_contact_channel:
           title: Slack contact channel
           type: string
@@ -75,7 +79,7 @@ spec:
           product: "${{ parameters.product }}"
           component: "${{ parameters.component }}"
           app_full_name: "${{ parameters.product }}-${{ parameters.component }}"
-          description: "A good description example"
+          description: "${{ parameters.description }}"
           owner: "${{ parameters.product }}"
 
     # This step publishes the contents of the working directory to GitHub.

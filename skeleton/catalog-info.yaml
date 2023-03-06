@@ -5,14 +5,21 @@ metadata:
   description: ${{ values.description }}
   annotations:
     github.com/project-slug: "${{ values.storePath }}"
+    jujhar.com/project-build: "on the beast"
+    snyk.io/org-name: ${{ values.app_full_name }}
+    snyk.io/project-ids: b6ab231c-a019-4def-a148-4a10a79d6302
   tags:
     - api
     - express
 spec:
   type: openapi
   lifecycle: production
-  dependsOn: api:example-grpc-api
-  apiConsumedBy: component:example-website
+  dependsOn:
+    - example-grpc-api
+  apiConsumedBy:
+    - example-website
+  providesApis:
+    - example-grpc-api
   owner: ${{ values.owner }}
   system: product-catalog
   definition: |
