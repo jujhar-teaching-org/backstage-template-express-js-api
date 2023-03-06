@@ -13,6 +13,7 @@ spec:
   lifecycle: production
   owner: ${{ values.owner }}
   system: product-catalog
+  spec: example-grpc-api
   definition: |
     openapi: "3.0.0"
     info:
