@@ -27,3 +27,27 @@ spec:
       /catalog:
         get:
           summary: get a product catalog
+          consumes:
+          - application/json
+          produces:
+          - application/json
+          parameters:
+          - name: status
+            in: query
+            description: Status values that need to be considered for filter
+            required: false
+            type: array
+            items:
+              type: string
+            collectionFormat: multi
+            default: available
+            enum:
+              - available
+              - pending
+              - sold
+          responses: 
+            "200": 
+              description: successful operation
+          security:
+            - product_auth:
+                - "read:product"
