@@ -12,6 +12,7 @@ spec:
   type: openapi
   lifecycle: production
   owner: ${{ values.owner }}
+  system: product-catalog
   definition: |
     openapi: "3.0.0"
     info:
