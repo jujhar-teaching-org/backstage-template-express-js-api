@@ -14,8 +14,6 @@ metadata:
     - api
     - hurl
     - docker
-    - CI and CD
-    - k8s
 spec:
   owner: user:guest
   type: service
