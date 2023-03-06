@@ -5,7 +5,7 @@ metadata:
   name: express-js-api
   title: Express.js api
   description: An express js api with sensible defaults and sample Hurl itegration tests
-   tags:
+  tags:
     - javascript
     - nodejs
     - express
