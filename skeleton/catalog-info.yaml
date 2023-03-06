@@ -11,6 +11,8 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
+  dependsOn: example-grpc-api
+  apiConsumedBy: example-website
   owner: ${{ values.owner }}
   system: product-catalog
   spec: example-grpc-api
