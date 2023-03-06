@@ -4,7 +4,12 @@ kind: Template
 metadata:
   name: express-js-api
   title: Express.js api
-  description: An express js api with sample Hurl itegration tests
+  description: An express js api with sensible defaults and sample Hurl itegration tests
+   tags:
+    - javascript
+    - nodejs
+    - express
+    - api
 spec:
   owner: user:guest
   type: service

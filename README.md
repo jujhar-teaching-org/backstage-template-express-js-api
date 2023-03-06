@@ -14,12 +14,13 @@ Express js based API template with added Hurl integration tests
 
 ```
 
-## Add to your own backstage catalog
+## Add to your own Backstage catalog
 
 To add this to your own `/app-config.yaml: catalog->locations`section
 
 ```yaml
-# remote catalog template example
+# add under /app-config.yaml catalog->locations
+# remote catalog template template-express-js-api
 - type: url
   target: https://github.com/jujhar-teaching-org/template-express-js-api/blob/main/backstage-catalog-template.yaml
   rules:
