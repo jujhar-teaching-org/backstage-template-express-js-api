@@ -3,7 +3,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: express-js-api
-  title: Express.js api
+  title: Express.js based api
   description: An express js api with sensible defaults and sample Hurl itegration tests
   tags:
     - javascript
@@ -48,7 +48,7 @@ spec:
       name: Fetch Base
       action: fetch:template
       input:
-        url: ./app
+        url: ./content
         values:
           name: ${{ parameters.name }}
 
