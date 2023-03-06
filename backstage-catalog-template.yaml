@@ -6,17 +6,13 @@ metadata:
   name: express-js-api
   title: Express.js based api
   description: |
-    An Express.js api template with sensible defaults 
-     - Docker manifest
-     - Sample Hurl itegration tests
-     - CI/CD integration
-     - Observability baked in
-     - Kubernetes manifests
+    An Express.js api template with sensible defaults
+    Docker manifest, hurl tests, CI & CD
   tags:
     - nodejs
     - express
     - api
-    - Hurl
+    - hurl
 spec:
   owner: user:guest
   type: service
