@@ -43,7 +43,23 @@ spec:
           ui:options:
             allowedHosts:
               - github.com
-
+    - title: Provide some simple information
+      required:
+        - product
+        - component
+      properties:
+        product:
+          title: Product
+          type: string
+          description: Product team this component belongs to, normally the team name, e.g. cmc
+        component:
+          title: Component
+          type: string
+          description: Name of the component, e.g. java-client
+        slack_contact_channel:
+          title: Slack contact channel
+          type: string
+          description: Which channel (or user) to contact if there's any issues with this service.
   # These steps are executed in the scaffolder backend, using data that we gathered
   # via the parameters above.
   steps:
@@ -55,6 +71,11 @@ spec:
         url: ./skeleton
         values:
           name: ${{ parameters.name }}
+          product: "${{ parameters.product }}"
+          component: "${{ parameters.component }}"
+          app_full_name: "${{ parameters.product }}-${{ parameters.component }}"
+          description: "A good description example"
+          owner: "${{ parameters.product }}"
 
     # This step publishes the contents of the working directory to GitHub.
     - id: publish
