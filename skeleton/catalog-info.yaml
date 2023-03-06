@@ -1,14 +1,27 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: API
 metadata:
   name: ${{ values.app_full_name }}
   description: ${{ values.description }}
   annotations:
     github.com/project-slug: "${{ values.storePath }}"
   tags:
-    - library
+    - api
     - express
 spec:
-  type: library
-  lifecycle: experimental
+  type: openapi
+  lifecycle: production
   owner: ${{ values.owner }}
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 2.3.4
+      title: Product Catalog API
+      license:
+        name: MIT
+    servers:
+      - url: https://api.jujhar.com/v1
+    paths:
+      /catalog:
+        get:
+          summary: get a product catalog
