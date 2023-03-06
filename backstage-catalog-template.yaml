@@ -13,12 +13,10 @@ metadata:
      - Observability baked in
      - Kubernetes manifests
   tags:
-    - javascript
     - nodejs
     - express
     - api
     - Hurl
-    - CI & CD
 spec:
   owner: user:guest
   type: service
