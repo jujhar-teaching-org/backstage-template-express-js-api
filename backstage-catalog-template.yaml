@@ -1,16 +1,24 @@
+---
 apiVersion: scaffolder.backstage.io/v1beta3
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-template
 kind: Template
 metadata:
   name: express-js-api
   title: Express.js based api
-  description: An Express.js api template with sensible defaults and sample Hurl itegration tests
+  description: |
+    An Express.js api template with sensible defaults 
+     - Docker manifest
+     - Sample Hurl itegration tests
+     - CI/CD integration
+     - Observability baked in
+     - Kubernetes manifests
   tags:
     - javascript
     - nodejs
     - express
     - api
     - Hurl
+    - CI & CD
 spec:
   owner: user:guest
   type: service
@@ -68,7 +76,7 @@ spec:
       action: catalog:register
       input:
         repoContentsUrl: ${{ steps['publish'].output.repoContentsUrl }}
-        catalogInfoPath: catalog-info.yaml
+        catalogInfoPath: "catalog-info.yaml"
 
   # Outputs are displayed to the user after a successful execution of the template.
   output:
