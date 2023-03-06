@@ -17,7 +17,7 @@ metadata:
     - k8s
 spec:
   owner: user:guest
-  type: service
+  type: api
 
   # These parameters are used to generate the input form in the frontend, and are
   # used to gather input data for the execution of the template.
