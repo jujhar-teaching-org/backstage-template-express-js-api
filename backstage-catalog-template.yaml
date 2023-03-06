@@ -57,7 +57,7 @@ spec:
           title: Component
           type: string
           description: Name of the component, e.g. java-client
-        component:
+        description:
           title: Description
           type: string
           description: "Description of the component, e.g. api to surface cat gifs"
