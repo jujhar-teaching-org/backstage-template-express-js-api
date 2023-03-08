@@ -18,4 +18,4 @@ spec:
   dependsOn:
     - aws
   owner: ${{ values.owner }}
-  system: infrastructure
+  system: product
