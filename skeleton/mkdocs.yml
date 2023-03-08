@@ -1,0 +1,5 @@
+site_name: express-based-api-docs
+nav:
+  - Home: index.md
+plugins:
+  - techdocs-core
