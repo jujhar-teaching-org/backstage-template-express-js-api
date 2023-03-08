@@ -1,5 +1,5 @@
 apiVersion: backstage.io/v1alpha1
-kind: API
+kind: Component
 metadata:
   name: ${{ values.app_full_name }}
   description: ${{ values.description }}
@@ -13,7 +13,7 @@ metadata:
     - api
     - express
 spec:
-  type: infrastructure
+  type: service
   lifecycle: production
   dependsOn:
     - aws
