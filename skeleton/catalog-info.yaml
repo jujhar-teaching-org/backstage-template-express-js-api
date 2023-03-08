@@ -6,56 +6,16 @@ metadata:
   annotations:
     github.com/project-slug: "${{ values.storePath }}"
     jujhar.com/project-build: "on the beast"
+    backstage.io/techdocs-ref: dir:.
     snyk.io/org-name: ${{ values.app_full_name }}
     snyk.io/project-ids: b6ab231c-a019-4def-a148-4a10a79d6302
   tags:
     - api
     - express
 spec:
-  type: openapi
+  type: infrastructure
   lifecycle: production
   dependsOn:
-    - example-grpc-api
-  apiConsumedBy:
-    - example-website
-  providesApis:
-    - example-grpc-api
+    - aws
   owner: ${{ values.owner }}
-  system: product-catalog
-  definition: |
-    openapi: "3.0.0"
-    info:
-      version: 2.3.4
-      title: Product Catalog API
-      license:
-        name: MIT
-    servers:
-      - url: https://api.jujhar.com/v1
-    paths:
-      /catalog:
-        get:
-          summary: get a product catalog
-          consumes:
-          - application/json
-          produces:
-          - application/json
-          parameters:
-          - name: status
-            in: query
-            description: Status values that need to be considered for filter
-            required: false
-            type: array
-            items:
-              type: string
-            collectionFormat: multi
-            default: available
-            enum:
-              - available
-              - pending
-              - sold
-          responses: 
-            "200": 
-              description: successful operation
-          security:
-            - product_auth:
-                - "read:product"
+  system: infrastructure
