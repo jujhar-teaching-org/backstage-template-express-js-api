@@ -1,6 +1,11 @@
 # Backstage template express-js-api
 
-Express js based API template with added Hurl integration tests
+Express js based API template with:
+
+- added Hurl integration tests
+- docs
+- logging configigured
+- kubernetes manifest
 
 ## Add to your own Backstage catalog
 
