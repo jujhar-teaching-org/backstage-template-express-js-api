@@ -1,5 +1,5 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: API
 metadata:
   name: ${{ values.name }}
   description: ${{ values.description }}
@@ -13,7 +13,21 @@ metadata:
     - api
     - express
 spec:
-  type: api
+  type: openapi
   lifecycle: production
   owner: ${{ values.owner }}
-  system: product
+  system: ${{ parameters.product }}
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: Artist API
+      license:
+        name: MIT
+    servers:
+      - url: http://jujhar.com/v1
+    paths:
+      /artists:
+        get:
+          summary: List all artists
+    ...
