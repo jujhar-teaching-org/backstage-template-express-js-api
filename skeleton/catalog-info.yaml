@@ -1,5 +1,5 @@
 apiVersion: backstage.io/v1alpha1
-kind: api
+kind: Component
 metadata:
   name: ${{ values.app_full_name }}
   description: ${{ values.description }}
