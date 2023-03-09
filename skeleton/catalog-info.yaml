@@ -18,7 +18,7 @@ spec:
   type: openapi
   lifecycle: production
   owner: ${{ values.owner }}
-  system: ${{ parameters.product }}
+  system: ${{ values.product }}
   definition: |
     openapi: "3.0.0"
     info:
