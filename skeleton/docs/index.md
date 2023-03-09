@@ -1,5 +1,9 @@
 # Expres based API
 
+This is some Fake API docs using the mkdocs standard
+
+![doggy woggy](images/dogecoin.jpg)
+
 ## How to build
 
 `npm run dev`
