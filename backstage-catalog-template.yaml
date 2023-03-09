@@ -15,6 +15,7 @@ metadata:
     - hurl
     - docker
     - k8s
+    - github-actions
 spec:
   owner: user:guest
   type: api

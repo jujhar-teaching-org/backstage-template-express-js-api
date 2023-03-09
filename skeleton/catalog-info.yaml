@@ -12,6 +12,8 @@ metadata:
   tags:
     - api
     - express
+    - github-actions
+
 spec:
   type: openapi
   lifecycle: production
