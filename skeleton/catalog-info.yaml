@@ -15,7 +15,5 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  dependsOn:
-    - aws
   owner: ${{ values.owner }}
   system: product
