@@ -12,10 +12,6 @@ permissions:
   # Needed for the 'trilom/file-changes-action' action
   pull-requests: read
 
-# This allows a subsequently queued workflow run to interrupt previous runs
-concurrency:
-  cancel-in-progress: true
-
 jobs:
   ci-steps:
     runs-on: ubuntu-latest
